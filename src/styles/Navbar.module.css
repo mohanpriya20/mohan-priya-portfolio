@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@100..900&display=swap');
+
+
+.navbar {
+  background-color: black;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  overflow: hidden;
+  transition: height 0.3s ease;
+  height: 60px;
+}
+
+.navbar.expanded {
+  height: 225px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
+}
+
+.logo h1 {
+  color: whitesmoke;
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: 'Merriweather', serif;
+  margin-bottom: 10px;
+}
+
+.logo {
+  text-decoration: none;
+}
+
+.menu {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  display: none;
+}
+
+.navbar.expanded .menu {
+  display: flex;
+  margin-left: -40px;
+}
+
+.menu li {
+  list-style: none;
+}
+
+.menu a {
+  color: whitesmoke;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-family: 'Merriweather', serif;
+}
+
+.menu li:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+/* Hamburger Icon */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  align-self: flex-end;
+  margin-top: -30px;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: whitesmoke;
+  border-radius: 2px;
+}
+
+/* Responsive Styling for Larger Screens */
+@media (min-width: 768px) {
+  .navbar {
+    height: 60px;
+  }
+
+  .container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .hamburger {
+    display: none;
+  }
+}

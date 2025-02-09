@@ -1,0 +1,379 @@
+  /* Ensure the home section starts below the navbar */
+  .home {
+    background: aliceblue;
+    color: black;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 60px); /* Adjust height to fit viewport */
+    flex-direction: column;
+    padding: 20px; /* Add padding for small screens */
+    transition: all 0.3s ease; /* Smooth transition for layout changes */
+  }
+
+  .flexContainer {
+    display: grid;
+    grid-template-columns: 1fr; /* Stack on smaller screens */
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  @media (min-width: 768px) {
+    .home {
+      min-height: calc(100vh - 60px);
+    }
+
+    .flexContainer {
+      grid-template-columns: 1fr 2fr; /* Two-column layout for larger screens */
+    }
+  }
+
+  .profileSection,
+  .aboutSection {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .aboutSection h2 {
+    font-size: 1.5rem;
+    font-family: 'Merriweather', serif;
+    margin-top: 5px;
+    margin-bottom: -10px;
+    padding: 0px;
+    font-weight: 300;
+  }
+  
+  .aboutSection p {
+    font-size: 1.2rem;
+    color: black;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    font-family: 'Metal' , serif;
+  }
+  
+
+  .container {
+    max-width: 600px;
+    margin: auto auto;
+  }
+
+  .profilePic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; 
+    padding: 5px;
+    background: linear-gradient(135deg, #12c2f391, #a612f067, #007bff);
+    display: inline-block;
+    position: relative;
+  }
+  
+  .profilePic img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: block;
+    border: 0px solid white;
+  }  
+
+  .name {
+    font-size: 1.5rem;
+    margin: 0px;
+    font-family: 'Merriweather', serif;
+    font-weight: normal;
+  }
+  
+  .designation {
+    font-size: 1.2rem;
+    margin: 5px;
+    font-family: 'Mina', serif;
+    font-weight: 500;
+    color: darkslategray;
+  }
+  
+  .links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .link {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease, color 0.3s ease; 
+  }
+  
+  .link:hover {
+    transform: scale(1.2);
+  }
+  
+  .linkedin{
+    color: #0077B5;
+  }
+
+  .github {
+    color: black;
+  }
+
+  .mail {
+    color: crimson;
+  }
+
+  .resume {
+    margin-top: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Space between buttons */
+  }
+  
+  .resumeButton {
+    display: inline-flex;
+    align-items: center;
+    font-size: 1rem;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+    padding: 8px 16px;
+    border: none;
+    gap: 5px;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #00a2ff, #a600ff);
+    color: white;
+    font-weight: bold;
+    cursor: pointer; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    background-size: 200%;
+    animation: flash 2s infinite;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .resumeButton:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .resumeButton i {
+    font-size: 0.8rem;
+  }
+  
+  /* Keyframes for Flash Effect */
+  @keyframes flash {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .education {
+    background-color: snow;
+    color: #333;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .education h2 {
+    font-size: 1.8rem;
+    font-family: 'Merriweather', serif;
+    margin-top: 0px;
+    padding: 0px;
+    font-weight: 300;
+    color: black;
+  }
+  
+  .educationContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .educationItem {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .educationItem.leftAligned {
+    justify-content: flex-start;
+    text-align: left;
+    margin-left: -160px;
+  }
+  
+  .educationItem.rightAligned {
+    justify-content: flex-end;
+    text-align: left;
+    margin-right: -160px;
+  }
+  
+  .educationImage {
+    width: 400px;
+    height: 160px;
+    border-radius: 0px;
+    object-fit: cover;
+  }
+  
+  .educationContent {
+    max-width: 70%; /* Ensures content does not take too much space */
+  }
+  
+  .educationContent h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.3rem;
+    color: black;
+    font-family: 'Merriweather', serif;
+    font-weight: 300;
+  }
+  
+  .educationContent p {
+    margin: 0;
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+    font-family: 'Metal' , serif;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .educationItem {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .educationImage {
+      width: 100%;
+      height: auto;
+    }
+  
+    .educationContent {
+      text-align: center;
+    }
+  
+    .educationItem.leftAligned,
+    .educationItem.rightAligned {
+      justify-content: center;
+    }
+  }
+  
+  @media (max-width: 1108px) {
+    .educationItem.leftAligned,
+    .educationItem.rightAligned {
+      margin: 0px;
+    }
+  }
+
+    .experience {
+      background-color: aliceblue;
+      color: #333;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .experience h2 {
+        font-size: 1.8rem;
+        font-family: 'Merriweather', serif;
+        margin-top: 0;
+        padding: 0;
+        font-weight: 300;
+        color: black;
+    }
+
+    .experienceContainer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .experienceItem {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .logoAndTitle {
+        display: flex;
+        gap: 20px;
+        text-align: left;
+    }
+
+    .companyLogo {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        object-fit: contain;
+        background-color: #fff;
+    }
+
+    .logoAndTitle h3 {
+        margin: 0;
+        font-size: 1.4rem;
+        font-family: 'Mina', serif;
+        font-weight: bold;
+        color: black;
+    }
+
+    .experienceContent {
+        text-align: left;
+        flex: 1;
+    }
+
+    .logoAndTitle h4 {
+      margin: 0 0;
+      font-size: 1.2rem;
+      color: black;
+      font-family: math;
+      font-weight: bold;
+    }
+
+    .experienceContent p {
+        margin: 0;
+        font-size: 1.2rem;
+        line-height: 1.5;
+        font-family: 'Metal' , sans;
+        color: black;
+    }
+
+    .experienceContent h5 {
+      margin: 0;
+      font-size: 1.2rem;
+      line-height: 1.6;
+      font-family: math;
+    }
+
+    .experienceContent p:not(:first-child) {
+        display: list-item;
+        list-style-type: disc;
+        margin-left: 20px;
+        padding-left: 0;
+    }
+
+    @media (max-width: 768px) {
+        .experienceContainer {
+            grid-template-columns: 1fr;
+        }
+
+        .logoAndTitle {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .companyLogo {
+            width: 80px;
+            height: 80px;
+        }
+
+        .experienceContent {
+            text-align: left;
+        }
+    }
