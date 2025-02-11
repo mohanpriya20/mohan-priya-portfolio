@@ -1,19 +1,10 @@
-/* globals.css */
-/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Mina:wght@400;700&family=Smooch+Sans:wght@100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Metal&family=Mina:wght@400;700&family=Moon+Dance&family=Smooch+Sans:wght@100..900&display=swap');
-*/
-
-/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Mina:wght@400;700&family=Smooch+Sans:wght@100..900&family=Merriweather:wght@400;700&family=Metal&family=Moon+Dance&display=swap'); */
-
-
 html, body {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {

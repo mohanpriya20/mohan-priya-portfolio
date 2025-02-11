@@ -9,8 +9,16 @@ const Navbar = () => {
     setIsExpanded((prev) => !prev);
   };
 
-  const closeNavbar = () => {
+  const closeNavbar = (event) => {
+    event.preventDefault();
     setIsExpanded(false);
+  
+    const targetId = event.currentTarget.getAttribute("href").substring(1);
+    const targetElement = document.getElementById(targetId);
+  
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+    }
   };
 
   useEffect(() => {
@@ -47,13 +55,13 @@ const Navbar = () => {
           <div className={styles.bar}></div>
           <div className={styles.bar}></div>
         </div>
-        <ul className={styles.menu} onClick={closeNavbar}>
-          <li><Link href="#home">About</Link></li>
-          <li><Link href="#education">Education</Link></li>
-          <li><Link href="#experience">Experience</Link></li>
-          <li><Link href="#projects">Projects</Link></li>
-          <li><Link href="#skills">Skills</Link></li>
-          <li><Link href="#contact">Contact Me</Link></li>
+        <ul className={styles.menu}>
+          <li><a href="#home" onClick={closeNavbar}>About</a></li>
+          <li><a href="#education" onClick={closeNavbar}>Education</a></li>
+          <li><a href="#experience" onClick={closeNavbar}>Experience</a></li>
+          <li><a href="#projects" onClick={closeNavbar}>Projects</a></li>
+          <li><a href="#skills" onClick={closeNavbar}>Skills</a></li>
+          <li><a href="#contact" onClick={closeNavbar}>Contact Me</a></li>
         </ul>
       </div>
     </nav>

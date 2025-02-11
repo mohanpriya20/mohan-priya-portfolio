@@ -137,13 +137,13 @@
     border: none;
     gap: 5px;
     border-radius: 8px;
-    background: linear-gradient(90deg, #00a2ff, #a600ff);
+    background: linear-gradient(135deg, #12c2f3cc, #ca12f0c9, #007bff);
     color: white;
     font-weight: bold;
     cursor: pointer; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     background-size: 200%;
-    animation: flash 2s infinite;
+    animation: flash 4s infinite;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
   
