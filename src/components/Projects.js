@@ -22,7 +22,7 @@ const Projects = () => {
 
   return (
     <section className={styles.projects} id="projects">
-      <h2><i className="fas fa-code-branch"></i> Projects</h2>
+      <h2><i className="fas fa-laptop-code"></i> Projects</h2>
 
       <div className={styles.projectFlex}>
         {/* Image slider + audio */}
