@@ -47,7 +47,7 @@ const Navbar = () => {
   return (
     <nav className={`${styles.navbar} ${isExpanded ? styles.expanded : ''}`}>
       <div className={styles.container}>
-        <Link href="/" className={styles.logo}>
+        <Link href="#about" className={styles.logo}>
           <h1>Mohan Priya Mulagapu</h1>
         </Link>
         <div className={styles.hamburger} onClick={toggleNavbar}>
@@ -56,7 +56,7 @@ const Navbar = () => {
           <div className={styles.bar}></div>
         </div>
         <ul className={styles.menu}>
-          <li><a href="#home" onClick={closeNavbar}>About</a></li>
+          <li><a href="#about" onClick={closeNavbar}>About</a></li>
           <li><a href="#education" onClick={closeNavbar}>Education</a></li>
           <li><a href="#experience" onClick={closeNavbar}>Experience</a></li>
           <li><a href="#projects" onClick={closeNavbar}>Projects</a></li>
