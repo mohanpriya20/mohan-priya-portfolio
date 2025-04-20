@@ -1,5 +1,5 @@
-  /* Ensure the home section starts below the navbar */
-  .home {
+  /* Ensure the about section starts below the navbar */
+  .about {
     background: aliceblue;
     color: black;
     text-align: center;
@@ -22,7 +22,7 @@
   }
 
   @media (min-width: 768px) {
-    .home {
+    .about {
       min-height: calc(100vh - 60px);
     }
 
@@ -377,3 +377,212 @@
             text-align: left;
         }
     }
+
+    .projects {
+      background-color: snow;
+      color: #333;
+      padding: 40px 20px;
+      text-align: center;
+    }
+  
+    .projects h2 {
+      font-size: 1.8rem;
+      font-family: 'Merriweather', serif;
+      margin-top: 0px;
+      padding: 0px;
+      font-weight: 300;
+      color: black;
+    }
+
+    .projectFlex {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      max-width: 1100px;
+      flex-wrap: wrap;
+      margin: 0 auto;
+    }
+    
+    .projectMedia {
+      flex: 1;
+      padding: 20px;
+      max-width: 500px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    
+    .projectImage {
+      width: 100%;
+      object-fit: contain;
+      border-radius: 8px;
+      border: 2px solid #ddd;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    
+    .projectAudio {
+      width: 100%;
+    }
+    
+    .projectDescription {
+      flex: 1;
+      padding: 20px;
+      max-width: 600px;
+      text-align: left;
+    }
+    
+    .projectDescription h3 {
+      font-size: 1.3rem;
+      color: black;
+      font-family: 'Merriweather', serif;
+      font-weight: 600;
+      margin: 0px;
+      padding: 0px;
+    }
+    
+    .projectDescription p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      font-family: 'Metal', serif;
+      color: #333;
+    }
+    
+    .sliderWrapper {
+      position: relative;
+      width: 100%;
+      max-width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .sliderImage {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      border-radius: 8px;
+    }
+    
+    .leftArrow,
+    .rightArrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      border: none;
+      padding: 5px 14px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 25px;
+      z-index: 2;
+      opacity: 0.6;
+    }
+    
+    .leftArrow {
+      left: 10px;
+    }
+    
+    .rightArrow {
+      right: 10px;
+    }
+    
+    .leftArrow:hover,
+    .rightArrow:hover {
+      background-color: black;
+    }
+    
+    .imageContainer {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 9; /* maintains aspect ratio */
+      border-radius: 12px;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .imageBorderWrapper {
+      padding: 3px; /* thickness of the 'border' */
+      background: linear-gradient(135deg, #ff0000cc, #db5b00c9, #d29d20);
+      /* #000000cc, #000000c9, #3b3930*/
+      border-radius: 14px; /* slightly more than inner container */
+      display: inline-block;
+      max-width: 100%;
+      width: 100%;
+    }
+
+    .audioHeading {
+      font-size: 1.2rem;
+      font-weight: bold;
+      font-family: 'Merriweather', serif;
+      display: flex;
+      align-items: self-end;
+      margin-bottom: -10px;
+      margin-top: 0px;
+      letter-spacing: 0.5px;
+    }
+    
+    .audioIcon {
+      color: initial; /* Force browser default color */
+      background: none;
+      -webkit-background-clip: unset;
+      -webkit-text-fill-color: unset;
+      background-clip: unset;
+      font-size: 1.3rem;
+    }
+
+    .gradientText {
+      background: linear-gradient(135deg, #ff0000cc, #db5b00c9, #d29d20);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .projectTitle {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 1.6rem;
+      font-family: 'Merriweather', serif;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+    
+    .viewRepoButton {
+      display: inline-flex;
+      align-items: center;
+      font-size: 0.95rem;
+      padding: 6px 8px;
+      background: linear-gradient(135deg, #ff0000cc, #db5b00c9, #d29d20);
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    }
+    
+    .viewRepoButton i {
+      font-size: 1rem;
+    }
+    
+    .viewRepoButton:hover {
+      transform: scale(1.05);
+      background: linear-gradient(135deg, #ff0000cc, #db5b00c9, #d29d20);
+    }
+    
+    
+    /* Responsive Design */
+  @media (max-width: 768px) {
+    .projectFlex {
+      flex-direction: column;
+      place-items: anchor-center;
+      text-align: center;
+      grid-template-columns: 1fr;
+    }
+  }
+    
