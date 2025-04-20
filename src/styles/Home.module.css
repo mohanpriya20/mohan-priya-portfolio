@@ -680,6 +680,7 @@
     font-weight: bold;
     cursor: pointer;
     font-family: "Mina", serif;
+    color: #000000;
     transition: transform 0.3s ease, color 0.3s ease; 
   }
   
