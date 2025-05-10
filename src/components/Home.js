@@ -5,10 +5,14 @@ import Experience from "./Experience"
 import Projects from "./Projects";
 import Skills from "./Skills";
 import Contact from "./Contact";
+import ImageBanner from "./ImageBanner";
 
 const Home = () => {
   return (
     <>
+      {/* Image Banner */}
+      <ImageBanner/>
+      
       {/* About Section */}
       <About/>
 

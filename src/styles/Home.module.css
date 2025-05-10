@@ -841,7 +841,7 @@
 .flipCardInner {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 100px;
   border-radius: 16px;
   transition: transform 0.6s cubic-bezier(0.4,0.2,0.2,1);
   transform-style: preserve-3d;
@@ -872,16 +872,31 @@
   background: white;
 }
 
-.flipCardFront h3 {
+.flipCardFront h3, .flipCardBack h3, .flipCardBack p {
   margin: 0px !important;
 }
 
 .flipCardBack {
   transform: rotateY(180deg);
   background: white;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   text-align: center;
+  font-family: 'Mina', sans-serif;
+  font-size: 1.05rem;
+  color: #444;
+  padding: 14px;
+  display: flex;
+  min-height: 340px;
+  position: relative;
+  overflow: hidden;
+}
+
+.flipCardBack > div {
+  max-height: 90%;
+  overflow-y: auto;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* Flip on hover for non-touch devices */
@@ -924,5 +939,77 @@
 .flipCardFront li i {
   color: #00bfa6;
   font-size: 0.85rem;
+}
+
+.imageBanner {
+  background: linear-gradient(90deg, #12c2f3 0%, #ca12f0 100%);
+  background-size: 200% 200%;
+  animation: gradientMove 6s ease-in-out infinite;
+  padding: 25px 0 25px 0;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.bannerHeading {
+  text-align: center;
+  font-size: 2rem;
+  font-family: 'Merriweather', serif;
+  color: #fff;
+  margin-bottom: 18px;
+  text-shadow: 0 2px 8px #ca12f0, 0 0 12px #12c2f3;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.bannerItem {
+  flex: 0 0 auto;
+  width: 180px;
+  height: 120px;
+  margin: 0 10px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border: 3px solid #fff;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.bannerItem:hover {
+  transform: scale(1.08) rotate(-2deg);
+  box-shadow: 0 8px 24px #ca12f033;
+}
+
+.bannerItem img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  display: block;
+  filter: none;
+}
+
+.bannerTrack {
+  display: flex;
+  flex-direction: row;
+  animation: scroll 45s linear infinite;
+  width: fit-content;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
   
