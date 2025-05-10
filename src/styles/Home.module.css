@@ -8,7 +8,7 @@
     align-items: center;
     min-height: calc(100vh - 60px); /* Adjust height to fit viewport */
     flex-direction: column;
-    padding: 0px; /* Add padding for small screens */
+    padding: 20px; /* Add padding for small screens */
     transition: all 0.3s ease; /* Smooth transition for layout changes */
   }
 
@@ -1000,7 +1000,7 @@
 .bannerTrack {
   display: flex;
   flex-direction: row;
-  animation: scroll 45s linear infinite;
+  animation: scroll 35s linear infinite;
   width: fit-content;
 }
 
