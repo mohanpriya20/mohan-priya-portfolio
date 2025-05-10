@@ -8,7 +8,7 @@
     align-items: center;
     min-height: calc(100vh - 60px); /* Adjust height to fit viewport */
     flex-direction: column;
-    padding: 20px; /* Add padding for small screens */
+    padding: 0px; /* Add padding for small screens */
     transition: all 0.3s ease; /* Smooth transition for layout changes */
   }
 
@@ -1009,7 +1009,7 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
 }
   
