@@ -1340,8 +1340,8 @@
 
   .eduCardButton {
     display: flex;
-    flex-direction: column;
-    gap: 12px;
+    justify-content: space-between;
+    gap: 1px;
     align-items: center;
   }
 
