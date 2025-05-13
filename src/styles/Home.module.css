@@ -1040,25 +1040,6 @@
 .animatedPara2 { animation-delay: 0.8s; }
 .animatedPara3 { animation-delay: 1.1s; }
 
-.eduCard {
-  position: relative;
-  background: rgba(255,255,255,0.25);
-  box-shadow: 0 8px 32px 0 rgba(31,38,135,0.18);
-  backdrop-filter: blur(8px);
-  border-radius: 0;
-  border: 1px solid rgba(255,255,255,0.18);
-  padding: 32px 24px;
-  margin: 40px 0 40px 60px;
-  display: flex;
-  align-items: center;
-  gap: 32px;
-  transition: box-shadow 0.3s, transform 0.3s;
-  z-index: 1;
-  opacity: 0;
-  transform: translateY(40px);
-  animation: fadeInUp 0.8s forwards;
-}
-
 @keyframes fadeInUp {
   to {
     opacity: 1;
@@ -1219,10 +1200,10 @@
 }
 
 .viewCourseworkBtn {
+  display: inline-block;
   margin-left: 12px;
   padding: 4px 14px;
   background: #d8d2f8;
-  border: none;
   border-radius: 8px;
   font-weight: bold;
   cursor: pointer;
