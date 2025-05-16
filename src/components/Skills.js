@@ -97,8 +97,10 @@ const Skills = () => {
               </div>
               <div className={styles.flipCardBack}>
                 <div>
-                  <h3 className={styles.detailHeading}>{skill.detailHeading}</h3>
+                  <h3 className={styles.detailHeading} style={{ color: skill.color }}>{skill.detailHeading}</h3>
+                  <div className={styles.flipCardBackContent}>
                   <p>{skill.detail}</p>
+                  </div>
                 </div>
               </div>
             </div>
