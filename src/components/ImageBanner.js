@@ -1,7 +1,7 @@
 import styles from "../styles/Home.module.css";
 
 const ImageBanner = () => {
-  const imageCount = 18; // Update this if you add more images
+  const imageCount = 19; // Update this if you add more images
   const images = Array.from({ length: imageCount }, (_, i) => `/skills/image${i + 1}.png`);
 
   return (

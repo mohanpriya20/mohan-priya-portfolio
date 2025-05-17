@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styles from "../styles/Home.module.css";
+import BubbleBackground from "./BubbleBackground";
 
 const Projects = () => {
   const images = [
@@ -21,8 +22,10 @@ const Projects = () => {
   };
 
   return (
-    <section className={styles.projects} id="projects">
+    <section className={styles.projects} id="projects" style={{position: "relative", overflow: "hidden"}}>
       <h2><i className="fas fa-laptop-code"></i> Projects</h2>
+      
+      <BubbleBackground />
 
       <div className={styles.projectFlex}>
         {/* Image slider + audio */}

@@ -170,7 +170,6 @@
   }
   
   .education {
-    background-color: snow;
     color: #333;
     padding: 40px 20px;
     text-align: center;
@@ -1357,4 +1356,23 @@
   .eduCard3DWrapperFirst {
     margin-bottom: 30% !important;
   }
+}
+
+.bubbleBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.bubbleImage {
+  border-radius: 50%;
+  opacity: 0.4;
+  object-fit: cover;
+  box-shadow: 0 2px 12px #0002;
+  transition: filter 0.2s;
 }
